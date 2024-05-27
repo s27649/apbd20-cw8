@@ -401,7 +401,7 @@ namespace Exercise6
         public static IEnumerable<Emp> Task15(this IEnumerable<Emp> emps)
         {
             var methodSyntax = emps
-                .Where(e =>emps.Any(e2=> e2.Mgr==e.Mgr))
+                .Where(e =>emps.Any(e2=> e2.Mgr==e))
                 .OrderBy(e => e.Ename)                        
                 .ThenByDescending(e => e.Salary); 
             var result = methodSyntax;
